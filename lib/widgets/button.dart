@@ -14,6 +14,7 @@ class TimerButton extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return ButtonTheme(
+      buttonColor: Theme.of(context).accentColor,
       minWidth: size.width / 4,
       height: size.height / 4,
       child: RaisedButton.icon(
@@ -22,7 +23,12 @@ class TimerButton extends StatelessWidget {
         shape: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
         ),
-        label: Text(string),
+        label: Text(
+          string,
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
       ),
     );
   }

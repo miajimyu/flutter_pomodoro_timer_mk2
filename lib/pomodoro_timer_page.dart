@@ -170,17 +170,26 @@ class _PomodoroTimerPageState extends State<PomodoroTimerPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 TimerButton(
-                  icon: Icon(Icons.work),
+                  icon: Icon(
+                    Icons.work,
+                    color: Colors.black,
+                  ),
                   function: _sw.isRunning ? null : () => _workButtonPressed(),
                   string: 'Work',
                 ),
                 TimerButton(
-                  icon: Icon(Icons.free_breakfast),
+                  icon: Icon(
+                    Icons.free_breakfast,
+                    color: Colors.black,
+                  ),
                   function: _sw.isRunning ? null : () => _breakButtonPressed(),
                   string: 'Break',
                 ),
                 TimerButton(
-                  icon: Icon(_sw.isRunning ? Icons.pause : Icons.play_arrow),
+                  icon: Icon(
+                    _sw.isRunning ? Icons.pause : Icons.play_arrow,
+                    color: Colors.black,
+                  ),
                   function: () => _buttonPressed(),
                   string: _sw.isRunning ? 'Stop' : 'Start',
                 ),
